@@ -1,0 +1,15 @@
+body{
+    background-color: black;
+}
+.clock{
+    color: blueviolet;
+    font-size: 100px;
+    width: 600px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.date{
+    color: burlywood;
+}

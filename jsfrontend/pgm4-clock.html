@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="clock.css">
+
+    <title>clock</title>
+</head>
+<body>
+    <div class="containerfluid bg-">
+        <div class="row">
+            <div class="col-4"></div>
+        <div id="clk" class="col-4 clock">
+            abcd
+        </div>
+        <div class="col-4"></div>
+        </div>
+    </div>
+    
+</body>
+<script>
+    function clock(){
+    const time =new Date()
+    console.log(time);
+
+    let hr=time.getHours()
+    console.log(hr);
+    let min=time.getMinutes()
+    console.log(min);
+    let sec = time.getSeconds()
+    console.log(sec);
+    let day=time.getDay()
+    console.log(day);
+    let mon=time.getMonth()
+    console.log(mon);
+    let year=time.getFullYear()
+    console.log(year);
+
+    clk.innerHTML=`${hr}:${min}:${sec} ${hr>12?"PM":"AM"}\n ${day}:${mon}:${year}`
+    
+    setTimeout(()=>{clock()},1000 )
+    
+    }
+    clock()//for first load call
+
+
+    function date(){
+        
+    }
+</script>
+</html>
